@@ -1,12 +1,11 @@
 {
-    "name": "com.lerocia.test",
-    "displayName": "Bounding Volumes",
+    "name": "com.lerocia.common",
+    "displayName": "Lerocia",
     "version": "0.0.1",
-    "unity": "2018.1",
-    "description": "Custom Bounding Volume structs, for situations where we cant use the ones provided by Unity.",
+    "unity": "2018.3",
+    "description": "Common files for client and server.",
     "keywords": [
-        "maths",
-        "unity"
+        "lerocia"
     ],
     "category": "Unity"
 }
