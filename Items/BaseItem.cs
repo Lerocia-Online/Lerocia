@@ -1,5 +1,6 @@
+using System.Collections.Generic;
+
 namespace Lerocia.Items {
-  using System.Collections.Generic;
   using Characters;
 
   public abstract class BaseItem {

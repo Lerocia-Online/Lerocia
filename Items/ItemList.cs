@@ -1,6 +1,7 @@
+using UnityEngine;
+using System.Collections.Generic;
+
 namespace Lerocia.Items {
-  using UnityEngine;
-  using System.Collections.Generic;
   using Potions;
   using Apparel;
   using Weapons;

@@ -1,6 +1,6 @@
-namespace Lerocia.Characters.Players {
-  using System;
+using System;
 
+namespace Lerocia.Characters.Players {
   [Serializable]
   public class User {
     public bool success;

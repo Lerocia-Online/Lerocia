@@ -1,5 +1,6 @@
+using System.Collections.Generic;
+
 namespace Lerocia.Characters {
-  using System.Collections.Generic;
   using Players;
   using NPCs;
 
