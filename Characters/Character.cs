@@ -49,24 +49,11 @@ namespace Lerocia.Characters {
     public Character() {
       Avatar = new GameObject();
       Inventory = new BindingList<int>();
-
-      // Allow new parts to be added, but not removed once committed.        
       Inventory.AllowNew = true;
-      Inventory.AllowRemove = false;
-
-      // Raise ListChanged events when new parts are added.
+      Inventory.AllowRemove = true;
       Inventory.RaiseListChangedEvents = true;
-
-      // Do not allow parts to be edited.
       Inventory.AllowEdit = false;
-
-      // Add a couple of parts to the list.
-      Inventory.Add(1);
-      Inventory.Add(2);
-
       Inventory.ListChanged += OnInventoryChange;
-
-      Inventory.Add(3);
     }
 
     public Character(string name, GameObject avatar, string type, int maxHealth, int currentHealth, int maxStamina,
