@@ -1,6 +1,6 @@
-using UnityEngine;
-
 namespace Lerocia.Characters.Players {
+  using UnityEngine;
+
   public class Player : Character {
     public Player() { }
 

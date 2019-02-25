@@ -1,6 +1,5 @@
-using System.Collections.Generic;
-
 namespace Lerocia.Characters.NPCs {
+  using System.Collections.Generic;
 
   public static class DialogueList {
     public static readonly Dictionary<int, Dictionary<string, Dialogue>> Dialogues =

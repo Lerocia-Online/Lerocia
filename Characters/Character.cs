@@ -1,7 +1,6 @@
-using System.Collections.Generic;
-using UnityEngine;
-
 namespace Lerocia.Characters {
+  using System.Collections.Generic;
+  using UnityEngine;
   using Items;
   using Items.Weapons;
   using Items.Apparel;

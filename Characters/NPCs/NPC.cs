@@ -1,7 +1,7 @@
-using UnityEngine;
-using System.Collections.Generic;
-
 namespace Lerocia.Characters.NPCs {
+  using UnityEngine;
+  using System.Collections.Generic;
+  
   public class NPC : Character {
     protected Dictionary<string, Dialogue> _dialogues;
     public int DialogueId;
