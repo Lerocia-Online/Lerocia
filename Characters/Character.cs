@@ -1,3 +1,5 @@
+using System.ComponentModel;
+
 namespace Lerocia.Characters {
   using System.Collections.Generic;
   using UnityEngine;
@@ -42,11 +44,29 @@ namespace Lerocia.Characters {
     public int Weapon;
     public int Apparel;
 
-    public List<int> Inventory;
+    public BindingList<int> Inventory;
 
     public Character() {
       Avatar = new GameObject();
-      Inventory = new List<int>();
+      Inventory = new BindingList<int>();
+
+      // Allow new parts to be added, but not removed once committed.        
+      Inventory.AllowNew = true;
+      Inventory.AllowRemove = false;
+
+      // Raise ListChanged events when new parts are added.
+      Inventory.RaiseListChangedEvents = true;
+
+      // Do not allow parts to be edited.
+      Inventory.AllowEdit = false;
+
+      // Add a couple of parts to the list.
+      Inventory.Add(1);
+      Inventory.Add(2);
+
+      Inventory.ListChanged += OnInventoryChange;
+
+      Inventory.Add(3);
     }
 
     public Character(string name, GameObject avatar, string type, int maxHealth, int currentHealth, int maxStamina,
@@ -72,7 +92,7 @@ namespace Lerocia.Characters {
       IsDead = false;
       Weapon = weapon;
       Apparel = apparel;
-      Inventory = new List<int>();
+      Inventory = new BindingList<int>();
     }
 
     public void UpdateStats() {
@@ -106,5 +126,9 @@ namespace Lerocia.Characters {
     }
 
     protected abstract void Kill();
+
+    protected virtual void OnInventoryChange(object sender, ListChangedEventArgs e) {
+      Debug.Log("Inventory was changed.");
+    }
   }
 }
