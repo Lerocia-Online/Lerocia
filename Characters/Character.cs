@@ -112,6 +112,10 @@ namespace Lerocia.Characters {
 
     protected abstract void Kill();
 
+    public virtual void InitializeInventoryListener() {
+      Debug.Log("Inventory listener was initialized");
+    }
+
     protected virtual void OnInventoryChange(object sender, ListChangedEventArgs e) {
       Debug.Log("Inventory was changed.");
     }
