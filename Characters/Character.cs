@@ -51,7 +51,6 @@ namespace Lerocia.Characters {
       Inventory.AllowNew = true;
       Inventory.AllowRemove = true;
       Inventory.RaiseListChangedEvents = true;
-      Inventory.AllowEdit = false;
     }
 
     public Character(string name, GameObject avatar, string type, int maxHealth, int currentHealth, int maxStamina,
@@ -78,6 +77,9 @@ namespace Lerocia.Characters {
       Weapon = weapon;
       Apparel = apparel;
       Inventory = new InventoryBindingList();
+      Inventory.AllowNew = true;
+      Inventory.AllowRemove = true;
+      Inventory.RaiseListChangedEvents = true;
     }
 
     public void UpdateStats() {
@@ -112,12 +114,8 @@ namespace Lerocia.Characters {
 
     protected abstract void Kill();
 
-    public virtual void InitializeInventoryListener() {
-      Debug.Log("Inventory listener was initialized");
-    }
+    public abstract void InitializeOnInventoryChange();
 
-    protected virtual void OnInventoryChange(object sender, ListChangedEventArgs e) {
-      Debug.Log("Inventory was changed.");
-    }
+    protected abstract void OnInventoryChange(object sender, ListChangedEventArgs e);
   }
 }

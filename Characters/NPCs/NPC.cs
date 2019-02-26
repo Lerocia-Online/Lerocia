@@ -1,7 +1,8 @@
 namespace Lerocia.Characters.NPCs {
   using UnityEngine;
   using System.Collections.Generic;
-  
+  using System.ComponentModel;
+
   public class NPC : Character {
     protected Dictionary<string, Dialogue> _dialogues;
     public int DialogueId;
@@ -33,6 +34,14 @@ namespace Lerocia.Characters.NPCs {
 
     public virtual void LootBody() {
       //TODO Handle NPC loot body
+    }
+
+    public override void InitializeOnInventoryChange() {
+      Debug.Log("Initialization of OnInventoryChange is not set up.");
+    }
+
+    protected override void OnInventoryChange(object sender, ListChangedEventArgs e) {
+      Debug.Log("OnInventoryChange is not set up.");
     }
   }
 }

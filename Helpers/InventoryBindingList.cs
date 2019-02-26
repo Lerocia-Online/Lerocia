@@ -16,8 +16,8 @@ namespace Lerocia.Helpers {
       base.RemoveItem(itemIndex);
     }
 
-    public delegate void myIntDelegate(int deletedItem);
+    public delegate void MyDelegate(int deletedItem);
 
-    public event myIntDelegate BeforeRemove;
+    public event MyDelegate BeforeRemove;
   }
 }
