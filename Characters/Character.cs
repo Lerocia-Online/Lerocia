@@ -52,7 +52,6 @@ namespace Lerocia.Characters {
       Inventory.AllowRemove = true;
       Inventory.RaiseListChangedEvents = true;
       Inventory.AllowEdit = false;
-      Inventory.ListChanged += OnInventoryChange;
     }
 
     public Character(string name, GameObject avatar, string type, int maxHealth, int currentHealth, int maxStamina,
