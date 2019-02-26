@@ -1,11 +1,10 @@
-using System.ComponentModel;
-
 namespace Lerocia.Characters {
-  using System.Collections.Generic;
   using UnityEngine;
   using Items;
   using Items.Weapons;
   using Items.Apparel;
+  using System.ComponentModel;
+  using Helpers;
 
   public abstract class Character {
     // Identifiers
@@ -44,11 +43,11 @@ namespace Lerocia.Characters {
     public int Weapon;
     public int Apparel;
 
-    public BindingList<int> Inventory;
+    public InventoryBindingList Inventory;
 
     public Character() {
       Avatar = new GameObject();
-      Inventory = new BindingList<int>();
+      Inventory = new InventoryBindingList();
       Inventory.AllowNew = true;
       Inventory.AllowRemove = true;
       Inventory.RaiseListChangedEvents = true;
@@ -79,7 +78,7 @@ namespace Lerocia.Characters {
       IsDead = false;
       Weapon = weapon;
       Apparel = apparel;
-      Inventory = new BindingList<int>();
+      Inventory = new InventoryBindingList();
     }
 
     public void UpdateStats() {
