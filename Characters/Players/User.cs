@@ -5,8 +5,8 @@ namespace Lerocia.Characters.Players {
   public class User {
     public bool success;
     public string error;
-    public string username;
-    public int user_id;
+    public string character_id;
+    public int character_name;
     public int connection_id;
   }
 }
