@@ -8,10 +8,10 @@ namespace Lerocia.Characters {
 
   public abstract class Character {
     // Identifiers
-    public int UserId;
+    public int CharacterId;
     public string Name;
     public GameObject Avatar;
-    public string Type;
+    public string CharacterPersonality;
 
     // Movement interpolation
     public bool IsLerpingPosition;
@@ -53,11 +53,11 @@ namespace Lerocia.Characters {
       Inventory.RaiseListChangedEvents = true;
     }
 
-    public Character(string name, GameObject avatar, string type, int maxHealth, int currentHealth, int maxStamina,
+    public Character(string name, GameObject avatar, string characterPersonality, int maxHealth, int currentHealth, int maxStamina,
       int currentStamina, int gold, int baseDamage, int baseArmor, int weapon, int apparel) {
       Name = name;
       Avatar = avatar;
-      Type = type;
+      CharacterPersonality = characterPersonality;
       IsLerpingPosition = false;
       IsLerpingRotation = false;
       RealPosition = avatar.transform.position;
