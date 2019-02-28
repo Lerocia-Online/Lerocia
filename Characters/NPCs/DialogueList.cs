@@ -5,6 +5,14 @@ namespace Lerocia.Characters.NPCs {
     public static readonly Dictionary<int, Dictionary<string, Dialogue>> Dialogues =
       new Dictionary<int, Dictionary<string, Dialogue>> {
         {
+          -1,
+          new Dictionary<string, Dialogue> {
+            {
+              "",
+              new Dialogue("", null)
+            }
+          }
+        }, {
           0,
           new Dictionary<string, Dialogue> {
             {
