@@ -9,5 +9,6 @@ namespace Lerocia.Characters {
     public static Dictionary<int, Character> Characters = new Dictionary<int, Character>();
     public static Dictionary<int, Player> Players = new Dictionary<int, Player>();
     public static Dictionary<int, NPC> NPCs = new Dictionary<int, NPC>();
+    public static Dictionary<int, int> IdMap = new Dictionary<int, int>();
   }
 }
