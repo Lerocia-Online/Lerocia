@@ -7,6 +7,5 @@ namespace Lerocia.Characters.Players {
     public string error;
     public int character_id;
     public string character_name;
-    public int connection_id;
   }
 }
