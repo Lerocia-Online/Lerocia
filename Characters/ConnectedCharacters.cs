@@ -5,7 +5,6 @@ namespace Lerocia.Characters {
   using Helpers;
 
   public static class ConnectedCharacters {
-    public static User MyUser;
     public static Player MyPlayer;
     public static List<int> ConnectionIds = new List<int>();
     public static BiDictionary<int, int> IdMap = new BiDictionary<int, int>();
