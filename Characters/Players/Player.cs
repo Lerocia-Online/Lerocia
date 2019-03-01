@@ -5,9 +5,9 @@ namespace Lerocia.Characters.Players {
   public class Player : Character {
     public Player() { }
 
-    public Player(string name, GameObject avatar, string characterPersonality, int maxHealth, int currentHealth, int maxStamina,
+    public Player(int characterId, string name, GameObject avatar, string characterPersonality, int maxHealth, int currentHealth, int maxStamina,
       int currentStamina, int gold, int baseDamage, int baseArmor, int weapon, int apparel) : base(
-      name, avatar, characterPersonality, maxHealth, currentHealth, maxStamina, currentStamina, gold, baseDamage, baseArmor, weapon,
+      characterId, name, avatar, characterPersonality, maxHealth, currentHealth, maxStamina, currentStamina, gold, baseDamage, baseArmor, weapon,
       apparel) { }
 
     protected override void Kill() {

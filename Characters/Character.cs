@@ -53,8 +53,9 @@ namespace Lerocia.Characters {
       Inventory.RaiseListChangedEvents = true;
     }
 
-    public Character(string name, GameObject avatar, string characterPersonality, int maxHealth, int currentHealth, int maxStamina,
+    public Character(int characterId, string name, GameObject avatar, string characterPersonality, int maxHealth, int currentHealth, int maxStamina,
       int currentStamina, int gold, int baseDamage, int baseArmor, int weapon, int apparel) {
+      CharacterId = characterId;
       Name = name;
       Avatar = avatar;
       CharacterPersonality = characterPersonality;
