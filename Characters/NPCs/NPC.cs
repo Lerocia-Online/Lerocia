@@ -4,6 +4,7 @@ namespace Lerocia.Characters.NPCs {
   using System.Collections.Generic;
 
   public class NPC : Character {
+    public Vector3 Origin;
     public List<Destination> Destinations;
     
     public NPC() { }
@@ -41,6 +42,7 @@ namespace Lerocia.Characters.NPCs {
       apparelId,
       dialogueId
     ) {
+      Origin = avatar.transform.position;
       Destinations = new List<Destination>();
     }
 
