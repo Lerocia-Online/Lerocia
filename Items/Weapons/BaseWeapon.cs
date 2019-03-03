@@ -15,7 +15,7 @@ namespace Lerocia.Items.Weapons {
       name, 
       weight, 
       value, 
-      "Weapon"
+      "Weapons"
     ) {
       this.damage = damage;
       AddStat("Damage", damage.ToString());
