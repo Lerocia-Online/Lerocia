@@ -141,17 +141,12 @@ namespace Lerocia.Characters {
       }
     }
 
-    public void BuyItem(int itemId) {
-      if (Gold >= ItemList.Items[itemId].GetValue()) {
+    public void BuyItem(Character merchant, int itemId) {
+      if (Gold >= ItemList.Items[itemId].GetValue() && merchant.Inventory.Contains(itemId)) {
         Gold -= ItemList.Items[itemId].GetValue();
         Inventory.Add(itemId);
-      }
-    }
-
-    public void SellItem(int itemId) {
-      if (Inventory.Contains(itemId)) {
-        Inventory.Remove(itemId);
-        Gold += ItemList.Items[itemId].GetValue();
+        merchant.Inventory.Remove(itemId);
+        merchant.Gold += ItemList.Items[itemId].GetValue();
       }
     }
 
