@@ -5,10 +5,39 @@ namespace Lerocia.Characters.Players {
   public class Player : Character {
     public Player() { }
 
-    public Player(int characterId, string name, GameObject avatar, string characterPersonality, int maxHealth, int currentHealth, int maxStamina,
-      int currentStamina, int gold, int baseDamage, int baseArmor, int weapon, int apparel) : base(
-      characterId, name, avatar, characterPersonality, maxHealth, currentHealth, maxStamina, currentStamina, gold, baseDamage, baseArmor, weapon,
-      apparel) { }
+    public Player(
+      int characterId, 
+      string name, 
+      GameObject avatar, 
+      string characterPersonality, 
+      int maxHealth, 
+      int currentHealth, 
+      int maxStamina,
+      int currentStamina, 
+      int gold, 
+      int baseWeight,
+      int baseDamage, 
+      int baseArmor, 
+      int weapon, 
+      int apparel, 
+      int dialogueId
+    ) : base(
+      characterId, 
+      name, 
+      avatar, 
+      characterPersonality, 
+      maxHealth, 
+      currentHealth, 
+      maxStamina, 
+      currentStamina, 
+      gold, 
+      baseWeight,
+      baseDamage, 
+      baseArmor,
+      weapon,
+      apparel, 
+      dialogueId
+    ) { }
 
     protected override void Kill() {
       //TODO Handle Player death

@@ -4,7 +4,19 @@ namespace Lerocia.Items.Apparel {
   public class BaseApparel : BaseItem {
     private int armor;
 
-    public BaseApparel(int id, string name, int weight, int value, int armor) : base(id, name, weight, value, "Apparel") {
+    public BaseApparel(
+      int id, 
+      string name, 
+      int weight, 
+      int value, 
+      int armor
+    ) : base(
+      id, 
+      name, 
+      weight, 
+      value, 
+      "Apparel"
+    ) {
       this.armor = armor;
       AddStat("Armor", armor.ToString());
     }

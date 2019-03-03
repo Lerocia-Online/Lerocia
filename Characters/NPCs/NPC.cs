@@ -1,21 +1,43 @@
 namespace Lerocia.Characters.NPCs {
   using UnityEngine;
-  using System.Collections.Generic;
   using System.ComponentModel;
 
   public class NPC : Character {
-    protected Dictionary<string, Dialogue> _dialogues;
-    public int DialogueId;
-
     public NPC() { }
 
-    public NPC(int characterId, string name, GameObject avatar, string characterPersonality, int maxHealth, int currentHealth, int maxStamina,
-      int currentStamina, int gold, int baseDamage, int baseArmor, int weapon, int apparel,
-      int dialogueId) : base(characterId, name, avatar, characterPersonality, maxHealth, currentHealth, maxStamina, currentStamina, gold, baseDamage,
-      baseArmor, weapon, apparel) {
-      DialogueId = dialogueId;
-      _dialogues = DialogueList.Dialogues[dialogueId];
-    }
+    public NPC(
+      int characterId, 
+      string name, 
+      GameObject avatar, 
+      string characterPersonality, 
+      int maxHealth,
+      int currentHealth, 
+      int maxStamina,
+      int currentStamina, 
+      int gold, 
+      int baseWeight,
+      int baseDamage, 
+      int baseArmor, 
+      int weapon, 
+      int apparel,
+      int dialogueId
+    ) : base(
+      characterId, 
+      name, 
+      avatar, 
+      characterPersonality, 
+      maxHealth, 
+      currentHealth, 
+      maxStamina,
+      currentStamina, 
+      gold, 
+      baseWeight,
+      baseDamage,
+      baseArmor, 
+      weapon, 
+      apparel, 
+      dialogueId
+    ) { }
 
     public virtual string[] Interact(string prompt) {
       //TODO Handle NPC interaction

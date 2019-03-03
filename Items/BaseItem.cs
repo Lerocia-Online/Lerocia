@@ -11,7 +11,13 @@ namespace Lerocia.Items {
     private string description;
     private List<KeyValuePair<string, string>> stats;
 
-    protected BaseItem(int id, string name, int weight, int value, string category) {
+    protected BaseItem(
+      int id, 
+      string name, 
+      int weight, 
+      int value, 
+      string category
+    ) {
       this.id = id;
       this.name = name;
       this.weight = weight;

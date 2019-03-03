@@ -4,7 +4,18 @@ namespace Lerocia.Items.Potions {
   public class HealthPotion : BasePotion {
     private int health;
 
-    public HealthPotion(int id, string name, int weight, int value, int health) : base(id, name, weight, value) {
+    public HealthPotion(
+      int id, 
+      string name, 
+      int weight, 
+      int value, 
+      int health
+    ) : base(
+      id, 
+      name, 
+      weight, 
+      value
+    ) {
       this.health = health;
       SetDescription("Heals by " + health + " points.");
     }

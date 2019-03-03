@@ -4,7 +4,19 @@ namespace Lerocia.Items.Weapons {
   public class BaseWeapon : BaseItem {
     private int damage;
 
-    public BaseWeapon(int id, string name, int weight, int value, int damage) : base(id, name, weight, value, "Weapon") {
+    public BaseWeapon(
+      int id, 
+      string name, 
+      int weight, 
+      int value, 
+      int damage
+    ) : base(
+      id, 
+      name, 
+      weight, 
+      value, 
+      "Weapon"
+    ) {
       this.damage = damage;
       AddStat("Damage", damage.ToString());
     }

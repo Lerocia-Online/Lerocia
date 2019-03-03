@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Lerocia.Characters {
   using UnityEngine;
   using Items;
@@ -32,6 +34,7 @@ namespace Lerocia.Characters {
     public int MaxStamina;
     public int CurrentStamina;
     public int Gold;
+    public int BaseWeight;
     public int Weight;
     public int BaseDamage;
     public int Damage;
@@ -42,19 +45,40 @@ namespace Lerocia.Characters {
     // Equipped armor & weapons
     public int Weapon;
     public int Apparel;
+    
+    protected Dictionary<string, Dialogue> _dialogues;
+    public int DialogueId;
 
     public InventoryBindingList Inventory;
 
     public Character() {
       Avatar = new GameObject();
+      IsLerpingPosition = false;
+      IsLerpingRotation = false;
+      IsDead = false;
       Inventory = new InventoryBindingList();
       Inventory.AllowNew = true;
       Inventory.AllowRemove = true;
       Inventory.RaiseListChangedEvents = true;
     }
 
-    public Character(int characterId, string name, GameObject avatar, string characterPersonality, int maxHealth, int currentHealth, int maxStamina,
-      int currentStamina, int gold, int baseDamage, int baseArmor, int weapon, int apparel) {
+    public Character(
+      int characterId, 
+      string name, 
+      GameObject avatar, 
+      string characterPersonality, 
+      int maxHealth, 
+      int currentHealth, 
+      int maxStamina,
+      int currentStamina, 
+      int gold, 
+      int baseWeight,
+      int baseDamage, 
+      int baseArmor, 
+      int weapon, 
+      int apparel, 
+      int dialogueId
+    ) {
       CharacterId = characterId;
       Name = name;
       Avatar = avatar;
@@ -68,8 +92,9 @@ namespace Lerocia.Characters {
       CurrentHealth = currentHealth;
       MaxStamina = maxStamina;
       CurrentStamina = currentStamina;
-      Weight = 0;
       Gold = gold;
+      BaseWeight = baseWeight;
+      Weight = BaseWeight;
       BaseDamage = baseDamage;
       Damage = BaseDamage;
       BaseArmor = baseArmor;
@@ -81,6 +106,8 @@ namespace Lerocia.Characters {
       Inventory.AllowNew = true;
       Inventory.AllowRemove = true;
       Inventory.RaiseListChangedEvents = true;
+      DialogueId = dialogueId;
+      _dialogues = DialogueList.Dialogues[dialogueId];
     }
 
     public void UpdateStats() {

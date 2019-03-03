@@ -1,4 +1,4 @@
-namespace Lerocia.Characters.NPCs {
+namespace Lerocia.Characters {
   using System.Collections.Generic;
 
   public static class DialogueList {

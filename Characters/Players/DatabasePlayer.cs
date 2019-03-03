@@ -2,7 +2,7 @@ namespace Lerocia.Characters.Players {
   using System;
 
   [Serializable]
-  public class User {
+  public class DatabasePlayer {
     public bool success;
     public string error;
     public int character_id;
