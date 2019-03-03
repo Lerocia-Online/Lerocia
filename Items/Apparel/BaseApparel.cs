@@ -26,10 +26,10 @@ namespace Lerocia.Items.Apparel {
     }
 
     private void Equip(Character character) {
-      if (character.Apparel != GetId()) {
-        character.Apparel = GetId();
+      if (character.ApparelId != GetId()) {
+        character.ApparelId = GetId();
       } else {
-        character.Apparel = -1;
+        character.ApparelId = -1;
       }
       character.UpdateStats();
     }

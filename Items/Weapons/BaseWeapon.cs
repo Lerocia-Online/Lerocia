@@ -26,10 +26,10 @@ namespace Lerocia.Items.Weapons {
     }
 
     private void Equip(Character character) {
-      if (character.Weapon != GetId()) {
-        character.Weapon = GetId();
+      if (character.WeaponId != GetId()) {
+        character.WeaponId = GetId();
       } else {
-        character.Weapon = -1;
+        character.WeaponId = -1;
       }
       character.UpdateStats();
     }

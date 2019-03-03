@@ -18,8 +18,8 @@ namespace Lerocia.Characters.NPCs {
       int baseWeight,
       int baseDamage, 
       int baseArmor, 
-      int weapon, 
-      int apparel,
+      int weaponId, 
+      int apparelId,
       int dialogueId
     ) : base(
       characterId, 
@@ -34,8 +34,8 @@ namespace Lerocia.Characters.NPCs {
       baseWeight,
       baseDamage,
       baseArmor, 
-      weapon, 
-      apparel, 
+      weaponId, 
+      apparelId, 
       dialogueId
     ) { }
 

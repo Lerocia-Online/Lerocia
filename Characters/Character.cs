@@ -43,8 +43,8 @@ namespace Lerocia.Characters {
     public bool IsDead;
 
     // Equipped armor & weapons
-    public int Weapon;
-    public int Apparel;
+    public int WeaponId;
+    public int ApparelId;
     
     public Dictionary<string, Dialogue> Dialogues;
     public int DialogueId;
@@ -75,8 +75,8 @@ namespace Lerocia.Characters {
       int baseWeight,
       int baseDamage, 
       int baseArmor, 
-      int weapon, 
-      int apparel, 
+      int weaponId, 
+      int apparelId, 
       int dialogueId
     ) {
       CharacterId = characterId;
@@ -100,8 +100,8 @@ namespace Lerocia.Characters {
       BaseArmor = baseArmor;
       Armor = BaseArmor;
       IsDead = false;
-      Weapon = weapon;
-      Apparel = apparel;
+      WeaponId = weaponId;
+      ApparelId = apparelId;
       Inventory = new InventoryBindingList();
       Inventory.AllowNew = true;
       Inventory.AllowRemove = true;
@@ -111,15 +111,15 @@ namespace Lerocia.Characters {
     }
 
     public void UpdateStats() {
-      if (Weapon >= 0) {
-        BaseWeapon weapon = ItemList.Items[Weapon] as BaseWeapon;
+      if (WeaponId >= 0) {
+        BaseWeapon weapon = ItemList.Items[WeaponId] as BaseWeapon;
         Damage = weapon.GetDamage();
       } else {
         Damage = BaseDamage;
       }
 
-      if (Apparel >= 0) {
-        BaseApparel apparel = ItemList.Items[Apparel] as BaseApparel;
+      if (ApparelId >= 0) {
+        BaseApparel apparel = ItemList.Items[ApparelId] as BaseApparel;
         Armor = apparel.GetArmor();
       } else {
         Armor = BaseArmor;
