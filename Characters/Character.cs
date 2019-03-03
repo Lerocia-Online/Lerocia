@@ -46,7 +46,7 @@ namespace Lerocia.Characters {
     public int Weapon;
     public int Apparel;
     
-    protected Dictionary<string, Dialogue> _dialogues;
+    public Dictionary<string, Dialogue> Dialogues;
     public int DialogueId;
 
     public InventoryBindingList Inventory;
@@ -107,7 +107,7 @@ namespace Lerocia.Characters {
       Inventory.AllowRemove = true;
       Inventory.RaiseListChangedEvents = true;
       DialogueId = dialogueId;
-      _dialogues = DialogueList.Dialogues[dialogueId];
+      Dialogues = DialogueList.Dialogues[dialogueId];
     }
 
     public void UpdateStats() {

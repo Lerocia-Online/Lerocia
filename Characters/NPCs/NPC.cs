@@ -47,7 +47,7 @@ namespace Lerocia.Characters.NPCs {
     protected override void Kill() {
       //TODO Handle NPC death
       IsDead = true;
-      _dialogues = DialogueList.Dialogues[0];
+      Dialogues = DialogueList.Dialogues[0];
     }
 
     public virtual void StartMerchant() {
