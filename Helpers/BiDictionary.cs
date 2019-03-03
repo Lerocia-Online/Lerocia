@@ -16,6 +16,20 @@ namespace Lerocia.Helpers {
       secondToFirst.Add(second, first);
     }
 
+    public void RemoveByFirst(TFirst first) {
+      TSecond second;
+      firstToSecond.TryGetValue(first, out second);
+      firstToSecond.Remove(first);
+      secondToFirst.Remove(second);
+    }
+
+    public void RemoveBySecond(TSecond second) {
+      TFirst first;
+      secondToFirst.TryGetValue(second, out first);
+      firstToSecond.Remove(first);
+      secondToFirst.Remove(second);
+    }
+
     public bool TryGetByFirst(TFirst first, out TSecond second) {
       return firstToSecond.TryGetValue(first, out second);
     }
