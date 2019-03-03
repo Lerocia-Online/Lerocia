@@ -10,7 +10,7 @@ namespace Lerocia.Items.Potions {
       name, 
       weight, 
       value, 
-      "Potion"
+      "Potions"
     ) { }
   }
 }
