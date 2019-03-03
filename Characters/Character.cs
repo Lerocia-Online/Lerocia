@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Lerocia.Characters {
@@ -137,6 +138,20 @@ namespace Lerocia.Characters {
         if (CurrentHealth <= 0) {
           Kill();
         }
+      }
+    }
+
+    public void BuyItem(int itemId) {
+      if (Gold >= ItemList.Items[itemId].GetValue()) {
+        Gold -= ItemList.Items[itemId].GetValue();
+        Inventory.Add(itemId);
+      }
+    }
+
+    public void SellItem(int itemId) {
+      if (Inventory.Contains(itemId)) {
+        Inventory.Remove(itemId);
+        Gold += ItemList.Items[itemId].GetValue();
       }
     }
 
