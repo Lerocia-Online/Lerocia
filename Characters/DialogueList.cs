@@ -63,7 +63,7 @@ namespace Lerocia.Characters {
                 })
             }, {
               "Show me what you've got!",
-              new Dialogue("Sorry, merchant functionality isn't implemented yet. Keep an eye out for future updates!",
+              new Dialogue("Take a look.",
                 new[] {
                   "StartMerchant"
                 })
