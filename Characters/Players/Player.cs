@@ -7,9 +7,9 @@ namespace Lerocia.Characters.Players {
 
     public Player(
       int characterId, 
-      string name, 
-      GameObject avatar, 
+      string characterName, 
       string characterPersonality, 
+      GameObject avatar, 
       int maxHealth, 
       int currentHealth, 
       int maxStamina,
@@ -23,9 +23,9 @@ namespace Lerocia.Characters.Players {
       int dialogueId
     ) : base(
       characterId, 
-      name, 
-      avatar, 
+      characterName, 
       characterPersonality, 
+      avatar, 
       maxHealth, 
       currentHealth, 
       maxStamina, 

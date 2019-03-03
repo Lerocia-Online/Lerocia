@@ -11,9 +11,9 @@ namespace Lerocia.Characters {
   public abstract class Character {
     // Identifiers
     public int CharacterId;
-    public string Name;
-    public GameObject Avatar;
+    public string CharacterName;
     public string CharacterPersonality;
+    public GameObject Avatar;
 
     // Movement interpolation
     public bool IsLerpingPosition;
@@ -64,9 +64,9 @@ namespace Lerocia.Characters {
 
     public Character(
       int characterId, 
-      string name, 
-      GameObject avatar, 
+      string characterName, 
       string characterPersonality, 
+      GameObject avatar, 
       int maxHealth, 
       int currentHealth, 
       int maxStamina,
@@ -80,9 +80,9 @@ namespace Lerocia.Characters {
       int dialogueId
     ) {
       CharacterId = characterId;
-      Name = name;
-      Avatar = avatar;
+      CharacterName = characterName;
       CharacterPersonality = characterPersonality;
+      Avatar = avatar;
       IsLerpingPosition = false;
       IsLerpingRotation = false;
       RealPosition = avatar.transform.position;
