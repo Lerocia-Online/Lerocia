@@ -5,7 +5,7 @@ namespace Lerocia.Characters.NPCs {
     public Vector3 Position;
     public float Duration;
 
-    public Destination(Vector3 position, int duration) {
+    public Destination(Vector3 position, float duration) {
       Position = position;
       Duration = duration;
     }
