@@ -53,7 +53,6 @@ namespace Lerocia.Characters {
     public InventoryBindingList Inventory;
 
     public Character() {
-      Avatar = new GameObject();
       IsLerpingPosition = false;
       IsLerpingRotation = false;
       IsDead = false;
