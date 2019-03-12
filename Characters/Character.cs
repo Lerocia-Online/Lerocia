@@ -60,6 +60,7 @@ namespace Lerocia.Characters {
       Inventory.AllowNew = true;
       Inventory.AllowRemove = true;
       Inventory.RaiseListChangedEvents = true;
+      UpdateStats();
     }
 
     public Character(
@@ -108,6 +109,7 @@ namespace Lerocia.Characters {
       Inventory.RaiseListChangedEvents = true;
       DialogueId = dialogueId;
       Dialogues = DialogueList.Dialogues[dialogueId];
+      UpdateStats();
     }
 
     public void UpdateStats() {
