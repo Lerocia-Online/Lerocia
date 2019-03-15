@@ -1,3 +1,5 @@
+using Lerocia.Characters.Bodies;
+
 namespace Lerocia.Characters {
   using System.Collections.Generic;
   using Players;
@@ -12,5 +14,6 @@ namespace Lerocia.Characters {
     public static Dictionary<int, Character> Characters = new Dictionary<int, Character>();
     public static Dictionary<int, Player> Players = new Dictionary<int, Player>();
     public static Dictionary<int, NPC> NPCs = new Dictionary<int, NPC>();
+    public static Dictionary<int, Body> Bodies = new Dictionary<int, Body>();
   }
 }
