@@ -41,8 +41,8 @@ namespace Lerocia.Characters {
     public int Armor;
 
     // Equipped armor & weapons
-    public int WeaponId;
-    public int ApparelId;
+    public int WeaponId = -1;
+    public int ApparelId = -1;
 
     public Dictionary<string, Dialogue> Dialogues;
     public int DialogueId;
