@@ -39,14 +39,6 @@ namespace Lerocia.Characters.Players {
       dialogueId
     ) { }
 
-    protected override void Kill() {
-      //TODO Handle Player death
-      // Reset players health
-      CurrentHealth = MaxHealth;
-      // Move them back to "spawn" point
-      Avatar.transform.position = new Vector3(0, 1, 0);
-    }
-
     public override void InitializeOnInventoryChange() {
       Debug.Log("Initialization of OnInventoryChange is not set up.");
     }

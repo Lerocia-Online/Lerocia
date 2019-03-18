@@ -1,7 +1,5 @@
-using System;
-using System.Collections.Generic;
-
 namespace Lerocia.Characters {
+  using System.Collections.Generic;
   using UnityEngine;
   using Items;
   using Items.Weapons;
@@ -41,12 +39,11 @@ namespace Lerocia.Characters {
     public int Damage;
     public int BaseArmor;
     public int Armor;
-    public bool IsDead;
 
     // Equipped armor & weapons
     public int WeaponId;
     public int ApparelId;
-    
+
     public Dictionary<string, Dialogue> Dialogues;
     public int DialogueId;
 
@@ -55,7 +52,6 @@ namespace Lerocia.Characters {
     public Character() {
       IsLerpingPosition = false;
       IsLerpingRotation = false;
-      IsDead = false;
       Inventory = new InventoryBindingList();
       Inventory.AllowNew = true;
       Inventory.AllowRemove = true;
@@ -64,20 +60,20 @@ namespace Lerocia.Characters {
     }
 
     public Character(
-      int characterId, 
-      string characterName, 
-      string characterPersonality, 
-      GameObject avatar, 
-      int maxHealth, 
-      int currentHealth, 
+      int characterId,
+      string characterName,
+      string characterPersonality,
+      GameObject avatar,
+      int maxHealth,
+      int currentHealth,
       int maxStamina,
-      int currentStamina, 
-      int gold, 
+      int currentStamina,
+      int gold,
       int baseWeight,
-      int baseDamage, 
-      int baseArmor, 
-      int weaponId, 
-      int apparelId, 
+      int baseDamage,
+      int baseArmor,
+      int weaponId,
+      int apparelId,
       int dialogueId
     ) {
       CharacterId = characterId;
@@ -100,7 +96,6 @@ namespace Lerocia.Characters {
       Damage = BaseDamage;
       BaseArmor = baseArmor;
       Armor = BaseArmor;
-      IsDead = false;
       WeaponId = weaponId;
       ApparelId = apparelId;
       Inventory = new InventoryBindingList();
@@ -129,16 +124,14 @@ namespace Lerocia.Characters {
     }
 
     public void TakeDamage(int damage) {
-      if (!IsDead) {
-        damage = damage - Armor;
-        if (damage <= 0) {
-          damage = 0;
-        }
+      damage = damage - Armor;
+      if (damage <= 0) {
+        damage = 0;
+      }
 
-        CurrentHealth -= damage;
-        if (CurrentHealth <= 0) {
-          Kill();
-        }
+      CurrentHealth -= damage;
+      if (CurrentHealth <= 0) {
+        CurrentHealth = 0;
       }
     }
 
@@ -150,10 +143,9 @@ namespace Lerocia.Characters {
         merchant.Gold += ItemList.Items[itemId].GetValue();
         return true;
       }
+
       return false;
     }
-
-    protected abstract void Kill();
 
     public abstract void InitializeOnInventoryChange();
 
