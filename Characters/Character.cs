@@ -13,6 +13,7 @@ namespace Lerocia.Characters {
     public string CharacterName;
     public string CharacterPersonality;
     public GameObject Avatar;
+    public Vector3 Origin;
 
     // Movement interpolation
     public bool IsLerpingPosition;
@@ -80,6 +81,7 @@ namespace Lerocia.Characters {
       CharacterName = characterName;
       CharacterPersonality = characterPersonality;
       Avatar = avatar;
+      Origin = avatar.transform.position;
       IsLerpingPosition = false;
       IsLerpingRotation = false;
       RealPosition = avatar.transform.position;
