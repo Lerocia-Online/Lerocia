@@ -5,6 +5,7 @@ namespace Lerocia.Characters.NPCs {
 
   public class NPC : Character {
     public List<Destination> Destinations;
+    public int RespawnTime;
 
     public NPC() { }
 
@@ -23,7 +24,8 @@ namespace Lerocia.Characters.NPCs {
       int baseArmor,
       int weaponId,
       int apparelId,
-      int dialogueId
+      int dialogueId,
+      int respawnTime
     ) : base(
       characterId,
       characterName,
@@ -42,6 +44,7 @@ namespace Lerocia.Characters.NPCs {
       dialogueId
     ) {
       Destinations = new List<Destination>();
+      RespawnTime = respawnTime;
     }
 
     public virtual void StartMerchant() {
