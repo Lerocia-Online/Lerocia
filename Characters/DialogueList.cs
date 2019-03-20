@@ -19,7 +19,7 @@ namespace Lerocia.Characters {
               "INTERACT",
               new Dialogue("",
                 new[] {
-                  "LootBody"
+                  "StartLoot"
                 })
             }
           }
