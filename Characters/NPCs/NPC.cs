@@ -46,15 +46,6 @@ namespace Lerocia.Characters.NPCs {
       Destinations = new List<Destination>();
     }
 
-    public virtual string[] Interact(string prompt) {
-      //TODO Handle NPC interaction
-      return null;
-    }
-
-    public virtual void StartMerchant() {
-      //TODO Handle NPC start merchant
-    }
-
     public override void InitializeOnInventoryChange() {
       Debug.Log("Initialization of OnInventoryChange is not set up.");
     }
