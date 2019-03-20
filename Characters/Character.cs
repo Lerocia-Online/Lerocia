@@ -14,6 +14,8 @@ namespace Lerocia.Characters {
     public string CharacterPersonality;
     public GameObject Avatar;
     public Vector3 Origin;
+    public bool IsDead;
+    public float DeathTime;
 
     // Movement interpolation
     public bool IsLerpingPosition;
@@ -83,6 +85,7 @@ namespace Lerocia.Characters {
       CharacterPersonality = characterPersonality;
       Avatar = avatar;
       Origin = origin;
+      IsDead = false;
       IsLerpingPosition = false;
       IsLerpingRotation = false;
       RealPosition = avatar.transform.position;

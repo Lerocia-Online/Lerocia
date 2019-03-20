@@ -5,7 +5,6 @@ namespace Lerocia.Characters.NPCs {
 
   public class NPC : Character {
     public List<Destination> Destinations;
-    public float DeathTime;
     public float RespawnTime;
     public float LookRadius;
 
