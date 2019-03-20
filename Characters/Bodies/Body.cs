@@ -39,6 +39,10 @@ namespace Lerocia.Characters.Bodies {
     ) {
       
     }
+
+    public virtual void StartLoot() {
+      //TODO Handle Body start loot
+    }
     
     public override void InitializeOnInventoryChange() {
       Debug.Log("Initialization of OnInventoryChange is not set up.");

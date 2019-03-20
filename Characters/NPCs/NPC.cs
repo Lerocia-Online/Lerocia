@@ -46,6 +46,10 @@ namespace Lerocia.Characters.NPCs {
       Destinations = new List<Destination>();
     }
 
+    public virtual void StartMerchant() {
+      //TODO Handle NPC start merchant
+    }
+
     public override void InitializeOnInventoryChange() {
       Debug.Log("Initialization of OnInventoryChange is not set up.");
     }

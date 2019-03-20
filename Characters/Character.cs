@@ -134,6 +134,11 @@ namespace Lerocia.Characters {
         CurrentHealth = 0;
       }
     }
+    
+    public virtual string[] Interact(string prompt) {
+      //TODO Handle character interaction
+      return null;
+    }
 
     public bool BuyItem(Character merchant, int itemId) {
       if (Gold >= ItemList.Items[itemId].GetValue() && merchant.Inventory.Contains(itemId)) {
