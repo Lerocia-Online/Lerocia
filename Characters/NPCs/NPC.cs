@@ -27,7 +27,8 @@ namespace Lerocia.Characters.NPCs {
       int apparelId,
       int dialogueId,
       float respawnTime,
-      float lookRadius
+      float lookRadius,
+      Vector3 origin
     ) : base(
       characterId,
       characterName,
@@ -43,7 +44,8 @@ namespace Lerocia.Characters.NPCs {
       baseArmor,
       weaponId,
       apparelId,
-      dialogueId
+      dialogueId,
+      origin
     ) {
       Destinations = new List<Destination>();
       RespawnTime = respawnTime;

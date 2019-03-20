@@ -75,13 +75,14 @@ namespace Lerocia.Characters {
       int baseArmor,
       int weaponId,
       int apparelId,
-      int dialogueId
+      int dialogueId,
+      Vector3 origin
     ) {
       CharacterId = characterId;
       CharacterName = characterName;
       CharacterPersonality = characterPersonality;
       Avatar = avatar;
-      Origin = avatar.transform.position;
+      Origin = origin;
       IsLerpingPosition = false;
       IsLerpingRotation = false;
       RealPosition = avatar.transform.position;

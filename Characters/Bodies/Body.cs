@@ -35,7 +35,8 @@ namespace Lerocia.Characters.Bodies {
       baseArmor,
       weaponId,
       apparelId, 
-      dialogueId
+      dialogueId,
+      avatar.transform.position
     ) {
       
     }

@@ -20,7 +20,8 @@ namespace Lerocia.Characters.Players {
       int baseArmor, 
       int weaponId, 
       int apparelId, 
-      int dialogueId
+      int dialogueId,
+      Vector3 origin
     ) : base(
       characterId, 
       characterName, 
@@ -36,7 +37,8 @@ namespace Lerocia.Characters.Players {
       baseArmor,
       weaponId,
       apparelId, 
-      dialogueId
+      dialogueId,
+      origin
     ) { }
 
     public override void InitializeOnInventoryChange() {
