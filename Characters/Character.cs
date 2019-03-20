@@ -147,6 +147,11 @@ namespace Lerocia.Characters {
       return false;
     }
 
+    public void LootItem(Character body, int itemId) {
+      Inventory.Add(itemId);
+      body.Inventory.Remove(itemId);
+    }
+
     public abstract void InitializeOnInventoryChange();
 
     protected abstract void OnInventoryChange(object sender, ListChangedEventArgs e);
