@@ -26,9 +26,9 @@ namespace Lerocia.Characters.NPCs {
       int weaponId,
       int apparelId,
       int dialogueId,
+      Vector3 origin,
       float respawnTime,
-      float lookRadius,
-      Vector3 origin
+      float lookRadius
     ) : base(
       characterId,
       characterName,
