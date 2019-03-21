@@ -140,6 +140,26 @@ namespace Lerocia.Characters {
         CurrentHealth = 0;
       }
     }
+
+    public void Death() {
+      DeathTime = Time.time;
+      IsDead = true;
+      Gold = 0;
+      WeaponId = -1;
+      ApparelId = -1;
+      Inventory.Clear();
+      Avatar.transform.position = Origin;
+      Avatar.SetActive(false);
+    }
+
+    public void Respawn() {
+      IsDead = false;
+      CurrentHealth = MaxHealth;
+      CurrentStamina = MaxStamina;
+      UpdateStats();
+      Avatar.transform.position = Origin;
+      Avatar.SetActive(true);
+    }
     
     public virtual string[] Interact(string prompt) {
       //TODO Handle character interaction
